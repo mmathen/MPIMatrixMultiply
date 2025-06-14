@@ -54,6 +54,15 @@ Example:
 ```bash
 mpiexec -n 4 python matrix_multiply.py
 ```
+Run on AWS multi cluster matrix multiplication test using MPI:
+```bash
+mpiexec -np <number_of_processes> --hostfile ~/my_mpi_hosts.txt /usr/bin/python3 matrix_multiply.py <matrix_size>
+```
+
+Example:
+```bash
+mpiexec -np 4 --hostfile ~/my_mpi_hosts.txt  /usr/bin/python3 matrix_multiply.py 2000
+```
 
 ## Performance Metrics
 
